@@ -24,9 +24,9 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div className="flex h-screen flex-col">
-      <TopBar icon={FaUserTie} title="管理者モード" />
+      {/* <TopBar icon={FaUserTie} title="管理者モード" /> */}
       <div className="flex flex-1">
-        <SideMenu />
+        {/* <SideMenu /> */}
         <main className="bg-slate-50 flex-1 overflow-auto">{children}</main>
       </div>
     </div>

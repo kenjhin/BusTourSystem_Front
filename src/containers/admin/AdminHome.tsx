@@ -1,20 +1,27 @@
 "use client";
 
-import AdminMenuTab from "./adminMenu/AdminMenuTab";
+import AdminMenuList from "./AdminMenuList";
 import { Typography } from "@mui/material";
 
-const AdminHome = () => {
+const AdminDashboard = () => {
   return (
-    <div className="w-full px-4 py-10">
-      {/* 대시보드 제목 */}
-      <Typography variant="h4" className="text-center font-bold mb-8">
-        管理者メニュー
-      </Typography>
+    <div className="w-full p-6">
+      {/* ヘッダー */}
+      <div className="mb-8">
+        <Typography variant="h4" className="font-bold text-gray-800">
+          管理者ダッシュボード
+        </Typography>
+        <Typography variant="subtitle1" className="text-gray-500 mt-2">
+          システム管理メニュー
+        </Typography>
+      </div>
 
-      {/* 관리자 메뉴 */}
-      <AdminMenuTab />
+      {/* メニューリスト */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <AdminMenuList />
+      </div>
     </div>
   );
 };
 
-export default AdminHome;
+export default AdminDashboard;

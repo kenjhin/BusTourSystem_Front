@@ -14,21 +14,21 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   const menuItems = [
-    { name: "홈", href: "/", icon: HomeIcon },
+    { name: "ホーム", href: "/admin", icon: HomeIcon },
     {
-      name: "체크인 관리",
+      name: "チェックイン管理",
       href: "/admin/checkin",
       icon: ClipboardDocumentListIcon,
     },
-    { name: "패키지 관리", href: "/admin/packages", icon: BriefcaseIcon },
-    { name: "스태프 관리", href: "/admin/staff", icon: UserGroupIcon },
-    { name: "시스템 설정", href: "/admin/system", icon: Cog6ToothIcon },
+    { name: "パッケージ管理 ", href: "/admin/packages", icon: BriefcaseIcon },
+    { name: "スタプラ管理", href: "/admin/staff", icon: UserGroupIcon },
+    { name: "システム設定", href: "/admin/system", icon: Cog6ToothIcon },
   ];
 
   return (
     <div className="flex flex-col w-64 bg-white border-r border-gray-200">
       <div className="flex items-center justify-center h-16 px-4 bg-blue-600">
-        <h1 className="text-xl font-bold text-white">관리자 대시보드</h1>
+        <h1 className="text-xl font-bold text-white">管理者モード</h1>
       </div>
       <nav className="flex-1 px-2 py-4 space-y-1">
         {menuItems.map((item) => {
@@ -57,7 +57,7 @@ export default function Sidebar() {
             </div>
           </div>
           <div className="ml-3">
-            <p className="text-sm font-medium text-gray-700">관리자</p>
+            <p className="text-sm font-medium text-gray-700">管理者</p>
             <p className="text-xs text-gray-500">admin@example.com</p>
           </div>
         </div>
